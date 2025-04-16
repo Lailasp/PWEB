@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabalho com formulário</title>
+</head>
+<body>
+    <!-- O formulário é utilizado para coletar dados dos usuários, post=dados no corpo de requisição, get=dados via URL-->
+    <form action="#" method="post"> 
+    </form>
+        <label for="nome">Nome:</label> <!-- O "for" associa esse rótulo ao campo de entrada com id="nome" -->
+        <!-- O elemento <input> cria um campo de entrada de dados para o usuário -->
+        <input
+            type="text" 
+            name="nome" 
+            id="nome" 
+            placeholder="Informe o seu nome aqui" 
+            size="20"
+        >
+
+        <br>
+        <hr>
+
+        <label for="Email">Email:</label>
+        <input
+            type="Email"
+            name="Email"
+            id="Email"
+            placeholder="Informe o seu email aqui"
+            >
+        <br>
+        <hr>
+
+        <input
+            type="Date"
+            name="Data_Visita"
+            id="Data_Visita"
+        >
+        <br>
+        <label for="Hora_Visita">Hora da Visita</label>
+        <input
+            type="time"
+            name="Hora_Visita"
+            id="Hora_Visita"
+        >
+        <br>
+        <hr>
+
+        <label for="Data_hora_Visita">Hora e hora da Visita</label>
+        <input
+            type="datetime-local"
+            name="Data_hora_Visita"
+            id="Data_hora_Visita"
+        >
+        <br>
+        <hr>
+
+        <label for="Telefone">Telefone</label>
+        <input
+            type="tel"
+            name="Telefone"
+            id="Telefone"
+            placeholder="(82)9999-9999"
+        />
+        <br>
+        <hr>
+
+        <label for="tempo">Tempo da visita</label>
+        <input
+            type="number"
+            name="tempo"
+            id="tempo"
+        />
+        <br>
+        <hr>
+
+        <label for="observacao">Observação</label>
+        <textarea
+            name="observacao"
+            id="observacao"
+            cols="30"
+            rows="10"
+            placeholder="observacao"
+        ></textarea>
+        <br>
+        <hr>
+
+
+</body>
+</html>
