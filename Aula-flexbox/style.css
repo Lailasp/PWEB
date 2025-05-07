@@ -1,0 +1,63 @@
+body{
+    font-family: "Merriweather", serif;       /* fonte externa */
+    background-image: url("fundo.jpg");
+    background-size: cover;
+}
+
+p{
+    color:blueviolet;
+    font-family: "Merriweather", serif;       /* fonte externa */
+}
+
+#paragrafo{
+    color:aqua;
+    font-size: 20px;
+}
+
+a{
+    font-size: 10px;
+    text-decoration: none;
+    color: blueviolet;
+}
+
+.paragrafo{
+    color:blue;
+    font-size: 20px;
+    font-family: "Merriweather", serif;       /* fonte externa */
+}
+
+button{
+    background-color: plum;
+    border: none;
+    color: #fff;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: transform 0.5s ease;
+}
+
+.container{
+    display: flex;
+    height: 500px;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: azure;
+    padding: 20px;
+    width: 300px;
+    box-shadow: 9px 13px 16px 4px rgba(0,0,0,0.75);
+-webkit-box-shadow: 9px 13px 16px 4px rgba(0,0,0,0.75);
+-moz-box-shadow: 9px 13px 16px 4px rgba(0,0,0,0.75);
+border-radius: 8px;
+}
