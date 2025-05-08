@@ -1,0 +1,100 @@
+body{
+    font-family: "Merriweather", serif;       /* fonte externa */
+    background-image: url("fundo1.jpg");
+    background-size: cover;
+}
+
+p{
+    color:black;
+    font-family: "Merriweather", serif;       /* fonte externa */
+}
+
+#paragrafo{
+    color:aqua;
+    font-size: 20px;
+}
+
+a{
+    font-size: 15px;
+    text-decoration: none;
+    color: black;
+}
+
+.lista{
+    list-style: none
+}
+
+.paragrafo{
+    color:blue;
+    font-size: 20px;
+    font-family: "Merriweather", serif;       /* fonte externa */
+}
+
+button{
+    background-color: plum;
+    border: none;
+    color: #fff;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: transform 0.5s ease;
+}
+
+.cabecalho{
+    display:flex;
+    justify-content: center;
+}
+
+.logo{
+    height: 100px;
+    border-radius: 999px;
+    
+}
+
+.logo2{
+    height: 100px;
+    border-radius: 999px;   
+}
+.container{
+    display: flex;
+    height: 500px;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+/*form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: white;
+    padding: 20px;
+    width: 300px;
+    box-shadow: 9px 13px 16px 4px rgba(0,0,0,0.75);
+-webkit-box-shadow: 9px 13px 16px 4px rgba(0,0,0,0.75);
+-moz-box-shadow: 9px 13px 16px 4px rgba(0,0,0,0.75);
+border-radius: 8px;
+}*/
+
+.menu{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    height: 500px;
+    width: 300px; 
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    }
+
+
+    .menu-items {
+        flex-grow: 2;
+    }
