@@ -1,13 +1,12 @@
-
 body{
-    font-family: "Merriweather", serif;       /* fonte externa */
+    font-family: "Merriweather", serif;      
     background-image: url("fundo1.png");
     background-size: cover;
 }
 
 p{
     color:black;
-    font-family: "Merriweather", serif;       /* fonte externa */
+    font-family: "Merriweather", serif;       
 }
 
 #paragrafo{
@@ -33,7 +32,7 @@ a{
 .paragrafo{
     color:blue;
     font-size: 20px;
-    font-family: "Merriweather", serif;       /* fonte externa */
+    font-family: "Merriweather", serif;       
 }
 
 button{
@@ -79,11 +78,11 @@ button{
 .menu{
     display: flex;
     flex-direction: column;
-    align-items: center;               /* Centraliza o conteúdo horizontalmente */
-    justify-content: space-between;    /* Espaça entre topo e base */
+    align-items: center;               
+    justify-content: space-between;    
     background-color: white;
-    height: 90vh;                      /* Altura proporcional à tela */
-    width: 280px;                      /* Largura ajustada para responsividade */
+    height: 90vh;                      
+    width: 280px;                      
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
@@ -102,4 +101,10 @@ button{
         text-decoration: none;
         transition: 0.3s;
         transition: background-color 0.3s, transform 0.2s;
+
+    }
+
+    .menu-items:hover {
+        background-color: #333;
+        color: #fff;
     }
