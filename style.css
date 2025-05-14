@@ -1,6 +1,7 @@
+
 body{
     font-family: "Merriweather", serif;       /* fonte externa */
-    background-image: url("fundo1.jpg");
+    background-image: url("fundo1.png");
     background-size: cover;
 }
 
@@ -21,7 +22,12 @@ a{
 }
 
 .lista{
-    list-style: none
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .paragrafo{
@@ -73,14 +79,15 @@ button{
 .menu{
     display: flex;
     flex-direction: column;
+    align-items: center;               /* Centraliza o conteúdo horizontalmente */
+    justify-content: space-between;    /* Espaça entre topo e base */
     background-color: white;
-    height: 500px;
-    width: 300px; 
+    height: 90vh;                      /* Altura proporcional à tela */
+    width: 280px;                      /* Largura ajustada para responsividade */
     padding: 20px;
-    border-radius: 5px;
-    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
-    -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
-    -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    position: relative;   
     }
 
 
@@ -94,4 +101,5 @@ button{
         color: #333;
         text-decoration: none;
         transition: 0.3s;
+        transition: background-color 0.3s, transform 0.2s;
     }
