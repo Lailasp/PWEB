@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Jogo adivinhação</title>
+</head>
+ <body>
+<script>
+  alert ("Bem-vindo/a ao jogo de adivinhação, onde vc tem que acertar o número que o sistema pensou!");
+ 
+  let continuar = true;
+  let cont = 7;
+  while (continuar){
+
+    const opcaoSistema = Math.floor(Math.random()*101);
+   
+  while (cont > 0 ){
+   let sistema = opcaoSistema;
+   
+   let escolhaUsuario = prompt("Faça uma tentativa!");    
+    alert ("Analisando...");
+   
+    if (escolhaUsuario === sistema){
+      alert ("Acertou!");
+      continuar = false;
+    }else if (escolhaUsuario < sistema){
+      alert ("É maior!")
+    }else if (escolhaUsuario > sistema){
+       alert ("É menor!")
+    }else{
+       alert ("Errou!")
+    }
+    cont--;
+    alert("Você ainda tem "+cont+" tentativas");
+
+  }
+  let pararJogo = prompt("Deseja parar de jogar? ").toLowerCase().trim();
+  if (pararJogo === 'sim'){
+      continuar = false;
+  }else{
+   alert ("Obrigado por continuar!");
+  }
+  alert ("Obrigado por ter jogado!"); 
+}
+ </script>
+</body>
+</html>
+
+
+
+
+
+
+
