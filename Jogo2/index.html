@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Jogo pedra/papel/tesoura</title>
+</head>
+ <body>
+<script>
+  alert ("Seja bem-vindo/a ao jogo de pedra, papel e tesoura!");
+ 
+  let continuar = true;
+ 
+  while (continuar){
+    let opcaoUsuario = prompt("Escolha entre pedra, papel ou tesoura!").toLowerCase().trim();
+    alert ("O sistema vai analisar o vencedor!");
+   
+    const jogadas = ["pedra", "papel", "tesoura"];
+    const opcaoSistema = jogadas[Math.floor(Math.random()*3)];
+   
+    alert ("Jogadas feitas:");
+    alert ("Você: "+opcaoUsuario+"\nSistema: "+opcaoSistema);
+   
+    if ((opcaoUsuario === 'tesoura' && opcaoSistema === 'papel') || (opcaoUsuario === 'pedra' && opcaoSistema === 'tesoura') || (opcaoUsuario === 'papel' && opcaoSistema === 'pedra')){
+      alert ("Você venceu!");
+    }else if ((opcaoUsuario === 'papel' && opcaoSistema === 'tesoura') || (opcaoUsuario === 'pedra' && opcaoSistema === 'papel') || (opcaoUsuario === 'tesoura' && opcaoSistema === 'pedra')){
+      alert ("Você perdeu!")
+    }else if (opcaoUsuario === opcaoSistema){
+       alert ("Empate!")
+    }else{
+       alert ("Erro!")
+    }
+   
+  let pararJogo = prompt("Deseja parar o jogo: ").toLowerCase().trim();
+  if (pararJogo === 'sim'){
+      continuar = false;
+  }else{
+   alert ("Obrigado por continuar!");
+  }
+   
+  }
+  alert ("Obrigado por ter jogado!");
+ </script>
+</body>
+</html>
+
+
+
+
+
+
+
