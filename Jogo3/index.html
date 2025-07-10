@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Jogo da Forca</title>
+</head>
+<body>
+
+<script>
+  alert("Bem-vindo(a) ao jogo da forca! O programa escolhe uma palavra secreta de uma lista e o jogador tenta adivinhar a palavra, letra por letra!");
+
+  let continuar = true;
+
+  const escola = [
+    "Professor",
+    "Aluno",
+    "Lousa",
+    "Caderno",
+    "Mochila",
+    "Quadro",
+    "Giz",
+    "Caneta",
+    "Lápis",
+    "Borracha",
+    "Biblioteca",
+    "Sala",
+    "Diretoria",
+    "Refeitório",
+    "Recreio",
+    "Prova",
+    "Tarefa",
+    "Matéria",
+    "Livro",
+    "Uniforme"
+  ];
+
+  while (continuar) {
+    const indiceAleatorio = Math.floor(Math.random() * escola.length);
+    const palavra = escola[indiceAleatorio].toLowerCase();
+
+    let letrasDescobertas = Array(palavra.length).fill("_");
+    let tentativas = 15;
+    let letrasErradas = [];
+
+    while (tentativas > 0 && letrasDescobertas.includes("_")) {
+      let tentativa = prompt(
+        `Palavra: ${letrasDescobertas.join(" ")}\n` +
+        `Tentativas restantes: ${tentativas}\n` +
+        `Letras erradas: ${letrasErradas.join(", ")}\n` +
+        `Digite uma letra:`
+      );
+
+      if (!tentativa || tentativa.length !== 1) {
+        alert("Digite apenas uma letra.");
+        continue;
+      }
+
+      tentativa = tentativa.toLowerCase();
+
+      if (palavra.includes(tentativa)) {
+        for (let i = 0; i < palavra.length; i++) {
+          if (palavra[i] === tentativa) {
+            letrasDescobertas[i] = tentativa;
+          }
+        }
+        alert("Letra correta!");
+      } else {
+        if (!letrasErradas.includes(tentativa)) {
+          letrasErradas.push(tentativa);
+          tentativas--;
+          alert("Letra errada!");
+        } else {
+          alert("Você já tentou essa letra.");
+        }
+      }
+    }
+
+    if (!letrasDescobertas.includes("_")) {
+      alert(`🎉 Parabéns! Você acertou a palavra: ${palavra}`);
+    } else {
+      alert(`😢 Você perdeu! A palavra era: ${palavra}`);
+    }
+
+    let resposta = prompt("Deseja jogar novamente? (sim/não)").toLowerCase().trim();
+    if (resposta !== "sim") {
+      continuar = false;
+      alert("Obrigado por jogar!");
+    }
+  }
+</script>
+
+</body>
+</html>
