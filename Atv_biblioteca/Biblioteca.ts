@@ -1,5 +1,3 @@
-// Biblioteca.ts
-
 import { IBiblioteca } from './IBiblioteca';
 
 export class Biblioteca {
